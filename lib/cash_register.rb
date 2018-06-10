@@ -5,7 +5,7 @@ class CashRegister
     @total = 0
     @discount = discount
     @array = []
-    @last = {}
+    @last = 0
   end
 
   def add_item(title, price, quatity = 1)
@@ -13,7 +13,7 @@ class CashRegister
     quatity.times do
       @array << title
     end
-    @last.merge!(title, price)
+    @last = price * quantity
   end
 
   def apply_discount
@@ -27,6 +27,11 @@ class CashRegister
 
   def items
     @array
+  end
+
+  def void_last_transaction
+    @array.pop
+    @total - @last
   end
 
 end
