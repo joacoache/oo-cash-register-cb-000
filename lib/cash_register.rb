@@ -10,5 +10,5 @@ class CashRegister
     @total += price * quatity
   end
 
-  
+
 end
