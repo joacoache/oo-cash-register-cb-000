@@ -31,7 +31,7 @@ class CashRegister
 
   def void_last_transaction
     @array.pop
-    @total - @last
+    @total -= @last
   end
 
 end
