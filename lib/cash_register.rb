@@ -22,6 +22,7 @@ class CashRegister
   end
 
   def items
+    @array
   end
 
 end
