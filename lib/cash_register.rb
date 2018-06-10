@@ -5,6 +5,7 @@ class CashRegister
     @total = 0
     @discount = discount
     @array = []
+    @last = {}
   end
 
   def add_item(title, price, quatity = 1)
@@ -12,6 +13,7 @@ class CashRegister
     quatity.times do
       @array << title
     end
+    @last.merge!(title, price)
   end
 
   def apply_discount
